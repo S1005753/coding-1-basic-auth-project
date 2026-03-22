@@ -7,7 +7,7 @@ When you finish, add your names and a demo video link here, then submit one link
 **Group Members:** (list all group members here)
 * [Demo Video (1 per group)](http://includeyourlinkhere)
 
-In this project, you will design and build a **social media web application** in Python using Flask. This project is broken into four major phases, each of which will teach a critical part of building a secure application. 
+In this project, you will design and build an app of your own choosing in Python using Flask, with a focus on secure authentication and protecting user content. The project is broken into four major phases, each teaching key skills for building a functional and secure application. At the end, you and your classmates will playtest each other’s apps, with the goal of exposing security weaknesses.
 
 #### [Please Fork this Repo to begin](https://github.com/rlj0713/coding-1-game/fork)
 ---
@@ -22,57 +22,54 @@ In this project, you will design and build a **social media web application** in
 
 ## Project Requirements:
 
-| Part I: Planning & Design (15 pts) |
+| Part I: Planning & Design (10 pts) |
 |----------|
-* Decide on an app idea and core goal
-* Application idea is written or sketched out
-* Write a simple plan in the planning_and_design.txt file showing how the app will work step-by-step
-* Do not move forward to the next phase until checking with Mr. Jackson
+- Decide on an app idea — it can be anything you want (game, social app, journal, mini-tool, etc.).
+- Write or sketch out how your app will work and what features it will include.
+- Complete the `planning_and_design.txt` file showing your step-by-step plan.
+- Do not move forward until you’ve checked your plan with Mr. Jackson.
 
 | Phase II: Build Login & Registration Structure (15 pts) |
 |----------|
-* Create a basic Flask app with a login page and registration page.
-* Include fields for username and password.
-* Display a message for successful login and an error for incorrect login attempts.
-* Add navigation between login and registration pages.
-* Confirm that basic functionality works before moving to the next phase.
+- Create a basic Flask app with login and registration pages.
+- Include fields for username and password.
+- Display messages for successful login and errors for incorrect login attempts.
+- Add navigation between login and registration pages.
+- Add a “secret page” that displays the user’s name after login.
 
 | Phase III: Store Passwords in a Database (20 pts) |
 |----------|
-* Set up an SQLite database to persist user data.
-* Store username and password fields in the database.
-* Ensure that user data remains intact even when the app is restarted.
-* Verify that registration adds users correctly and login checks the database.
+- Set up an SQLite database (or other approved database) to store user data.
+- Ensure user data persists even when the app is restarted.
+- Verify that registration adds users correctly and login checks credentials against the database.
 
 | Phase IV: Encrypt Passwords with Bcrypt (20 pts) |
 |----------|
-* Install and use bcrypt to hash passwords before storing them in the database.
-* Update the login logic to verify passwords against the hashed values.
-* Ensure that passwords are never stored in plain text.
-* Test that registration and login work correctly for multiple users.
+- Use bcrypt to hash passwords before storing them in the database.
+- Update login logic to verify passwords against the hashed values.
+- Ensure that passwords are never stored in plain text.
+- Test registration and login with multiple users.
 
 | Phase V: Require Password Complexity (15 pts) |
 |----------|
-* Implement password validation rules:
+- Implement password validation rules:
   - At least 1 uppercase letter
   - At least 1 lowercase letter
   - At least 1 number
   - At least 1 special character
-* Display a clear error message if the password does not meet the requirements.
-* Ensure that registration only succeeds if the password meets the rules.
-* Test the validation thoroughly with multiple password examples.
+- Display a clear error message if the password does not meet the requirements.
+- Ensure registration only succeeds if the password passes validation.
+- Test with multiple password examples.
 
-| Phase VI: Reflection + Demo Video (15 pts) |
+| Phase VI: Reflection + Demo Video (20 pts) |
 |----------|
-* Record a screen-share of another student testing your login system.
-* Show a screen-share of your code and explain how each phase was implemented.
-* Describe at least 3 portions of your code that you are most proud of.
-* Both group members should speak during the video.
+- Swap apps with classmates and try to find weaknesses in each other’s authentication or secret content.
+- Identify potential security issues (weak passwords, unauthorized access, session bypasses) in a safe, controlled environment.
+- Discuss what worked, what failed, and how you would fix vulnerabilities.
+- Discuss lessons learned about secure app design and protecting user data.
 
 | Optional Bonus (+10 pts / each) |
 |----------|
-* Add a “secret page” that displays the user’s name after login.
-* Style the pages with CSS to improve the user interface.
-* Implement a “Reset Database” button for easy testing.
-* Add additional security features (e.g., session timeouts, email verification).
-=======
+- Style the pages with CSS to improve the user interface.
+- Implement a “Reset Database” button for easy testing.
+- Add additional security features (e.g., session timeouts, email verification).

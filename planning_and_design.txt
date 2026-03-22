@@ -1,52 +1,40 @@
 =========================
-SOCIAL MEDIA APP PLANNING & DESIGN
+APP PLANNING & DESIGN
 =========================
 
-Use this guide to plan your Flask authentication app before coding. 
-Fill out each section to clarify your ideas, and use it as a roadmap for your project.
+Plan your app before coding. You can build any app you want, but it must include authentication and a secret page.
 
 1. PROJECT NAME & THEME
 -------------------------
-- What is your app called?
-- What is the overall theme or function?
-- How do you want your users to feel when using the app?
+- What is your app called, and what type of app is it?  
+- What style or vibe do you want users to experience?
 
 2. CORE FUNCTIONALITY
 -------------------------
-- List the essential features your app must have:
-  * User registration
-  * Login / logout
-  * Profile page for each user (username, bio, avatar)
-  * “Secret” or personalized content feed after login
-  * Password complexity requirements
-- Are there any extra social features you might want? (optional)
-  * Posting messages, images, or status updates
-  * Following or friending other users
-  * Liking or commenting on posts
+- What are the essential features your app must have?  
+- What optional features could make your app more interactive or personalized?
 
 3. SECRET OR PERSONALIZED CONTENT
 -------------------------
-- What content will users see after logging in? (e.g., personalized feed, posts from friends, exclusive messages)
-- Can the content change depending on the user, their friends, or the time of day?
-- Will there be interactive content like mini-quizzes, polls, or games?
+- What content will users see after logging in?  
+- Will this content change depending on the user or over time?
 
 4. USER EXPERIENCE (UX) DESIGN
 -------------------------
-- How should the app look? (colors, fonts, layout, overall style)
-- Sketch or describe the login page, profile pages, and content feed layouts.
-- How will users navigate between pages? (menu, tabs, buttons, search bar)
-- What creative touches could make the experience more engaging? (animations, themes, dynamic content)
+- How should your app look and feel?  
+- How will users navigate between pages?
 
 5. SECURITY FEATURES
 -------------------------
-- What password rules will you enforce for users?
-- Will you track login attempts or session activity?
-- Any creative security twists? (fun error messages, secret questions, unlockable content)
+- What password and authentication rules will you enforce?  
+- How will you protect secret pages from unauthorized access?
 
 6. OPTIONAL CREATIVE ENHANCEMENTS
 -------------------------
-- User roles (admin, moderator, influencer, regular user)
-- Gamification elements (badges, points, achievements for posting/engaging)
-- Profile customization (avatars, banners, theme colors)
-- Feed enhancements (post filters, reactions, emojis, pinned posts)
-- Integration with APIs or external data (quotes, jokes, trivia, weather, or news)
+- What customization or fun features could users enjoy?  
+- Are there interactive elements, like games, quizzes, or badges, you could include?
+
+7. PLAYTESTING & ETHICAL HACKING
+-------------------------
+- How could someone try to “break into” your app safely?  
+- What measures will you take to secure your app against those attempts?
