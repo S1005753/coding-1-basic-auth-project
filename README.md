@@ -25,12 +25,12 @@ Each user should only be able to access and modify **their own data**.
 ---
 
 ### Helpful Links for This Unit:
-- Flask Documentation: https://flask.palletsprojects.com/en/2.3.x/
-- SQLite Documentation: https://www.sqlite.org/docs.html
-- Bcrypt Documentation: https://pypi.org/project/bcrypt/
-- Regex Tutorial for Python: https://docs.python.org/3/library/re.html
-- GitHub Cheat-Sheet: https://education.github.com/git-cheat-sheet-education.pdf
-- Flask Tutorial: https://youtu.be/Z1RJmh_OqeA?si=wRMKVcxRuuXRGsZN
+ - [Flask Documentation](https://flask.palletsprojects.com/en/2.3.x/)
+ - [SQLite Documentation](https://www.sqlite.org/docs.html)
+ - [Bcrypt Documentation](https://pypi.org/project/bcrypt/)
+ - [Regex Tutorial for Python](https://docs.python.org/3/library/re.html)
+ - [GitHub Cheat-Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+ - [Flask Tutorial](https://youtu.be/Z1RJmh_OqeA?si=wRMKVcxRuuXRGsZN)
 
 ---
 
