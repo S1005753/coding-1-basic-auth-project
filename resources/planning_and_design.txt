@@ -4,35 +4,36 @@ APP PLANNING & DESIGN
 
 1. PROJECT IDEA
 -------------------------
-- What is your app called?
-- What type of app is it? (journal, listings, notes, etc.)
-- What will users use your app for?
+- What is your app called? Hoppin'
+- What type of app is it? (journal, listings, notes, etc.) Fitness log
+- What will users use your app for? To track their progress and find new excersises 
 
 2. DATA MODEL (WHAT ARE YOU STORING?)
 -------------------------
-- What is a single “entry” in your app?
-- What fields will each entry have? (title, content, date, etc.)
-- How will entries be connected to a user?
+- What is a single “entry” in your app? The log-in page
+- What fields will each entry have? (title, content, date, etc.) A title saying log in. Spaces to enter information for username and password. And a space to enter the register page
+- How will entries be connected to a user? They can enter information
 
 3. CORE FEATURES (CRUD)
 -------------------------
-- What can users CREATE?
-- What will they see on the main page (READ)?
-- What can users EDIT (UPDATE)?
-- What can users DELETE?
+- What can users CREATE? A username and password. What they did for the day. 
+- What will they see on the main page (READ)? A title. Have you been hoppin' it? A record of their activites for the week.
+- What can users EDIT (UPDATE)? The record. Their account if they wish to (Password or new account)
+- What can users DELETE? Their account. Delete some past records if they need to.
 
 4. USER FLOW
 -------------------------
-- What happens after a user logs in?
-- What pages/routes will your app need? (dashboard, create, edit, etc.)
-- Describe a typical user experience from login → using your app
+- What happens after a user logs in? They will be met with the option to create a log (how many days, possible goal, etc)
+- What pages/routes will your app need? (dashboard, create, edit, etc.) Log in, register, choosing log style, the actual log.
+- Describe a typical user experience from login → using your app. (Ready to start Hoppin' it?) - Log in or register - They can either choose a record type or go straight to their log - They can update their log
 
 5. USER EXPERIENCE (UX)
 -------------------------
-- How should your app look and feel?
-- How will users navigate between pages?
-- How will entries be displayed (list, cards, etc.)?
+- How should your app look and feel? Friendly, froggy, nice and healthy
+- How will users navigate between pages? Buttons, like a log out button, account button.
+- How will entries be displayed (list, cards, etc.)? A mix of list and cards, possibly a chart
 
 6. OPTIONAL FEATURES
 -------------------------
-- What extra features might you add? (search, tags, sorting, etc.)
+- What extra features might you add? (search, tags, sorting, etc.) To be decided.
+
