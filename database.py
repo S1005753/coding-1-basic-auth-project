@@ -7,12 +7,24 @@ def get_db():
 
 def init_db():
     conn = get_db()
-    # Add your new table between lines 15 & 16.
+
+    # USERS TABLE
     conn.execute("""
         CREATE TABLE IF NOT EXISTS users (
             username TEXT PRIMARY KEY,
             password TEXT
         )
     """)
+
+    # ENTRIES TABLE (your fitness logs)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS entries (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT,
+            content TEXT,
+            user TEXT
+        )
+    """)
+
     conn.commit()
     conn.close()
