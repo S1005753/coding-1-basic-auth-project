@@ -75,27 +75,20 @@ def register():
 
     return render_template("register.html", error=error)
 
-@app.route("/dashboard")
+@app.route("/dashboard") #Complete
 def dashboard():
-    # TODO: RENAME THIS ROUTE TO /dashboard
 
     if "user" not in session:
         return redirect(url_for("login"))
     conn = get_db()
 
-    # TODO: Connect to the database
-
-    # TODO: Get all entries that belong to the logged-in user
     # Example:
     entries = conn.execute(
          "SELECT * FROM entries WHERE user=?",
          (session["user"],)
      ).fetchall()
 
-    # TODO: Close the connection
     conn.close()
-
-    # TODO: Pass entries into your template
     # Example:
     return render_template("dashboard.html", entries=entries, username=session["user"])
 
