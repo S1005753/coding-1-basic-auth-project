@@ -29,3 +29,11 @@ button {
 .error {
     color: rgb(114, 4, 4);
 }
+
+.register-link {
+  color: rgb(0, 0, 0);
+}
+
+.login-link {
+  color: yellow;
+}
