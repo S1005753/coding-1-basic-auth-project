@@ -7,6 +7,7 @@
 <h2>Your Dashboard</h2>
 
 <h3>Welcome, {{ username }}!</h3>
+<h3>Ready to get Hoppin'?!</h3>
 {% if entries %}
 
     {% for entry in entries %}
@@ -22,7 +23,7 @@
     {% endfor %}
 
 {% else %}
-    <p>No workouts yet</p>
+    <p>No Workouts Yet</p>
 {% endif %}
 
 <!-- TODO: Add a button or link to create a new entry -->
