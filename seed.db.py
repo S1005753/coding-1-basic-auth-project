@@ -26,11 +26,10 @@ def seed_database():
         ("charlie", "MyPassword789#"),
     ]
     sample_entries = [
-        ("alice", "First entry for Alice"),
-        ("bob", "First entry for Bob"),
-        ("charlie", "First entry for Charlie"),
+        ("Monday workout" , "Did 20 pushups and 30 squats", "alice"),
+        ("Tuesday workout", "Ran 3 miles", "alice"),
+        ("Wednesday workout", "Benched 135 lbs for 5 reps", "alice")
     ]
-    
     try:
         for username, password in sample_users:
             hashed_pw = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
@@ -39,6 +38,13 @@ def seed_database():
                 (username, hashed_pw)
             )
             print(f"Created user: {username}")
+
+        for title, content, user in sample_entries:
+            conn.execute(
+                "INSERT INTO entries (title, content, user) VALUES (?, ?, ?)",
+                (title, content, user)
+            )
+            print(f"Created entry: {title} for user {user}")
         
         conn.commit()
         print("\nDatabase seeding complete!")
