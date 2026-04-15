@@ -3,24 +3,24 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class = "dashboard-page"></div>
+    <h2>Your Weekly Workouts</h2>
 
-<h2>Your Weekly Workouts</h2>
+    <h3>Welcome, {{ username }}!</h3>
+    <h3>Ready to get Hoppin'?!</h3>
+    {% if entries %}
 
-<h3>Welcome, {{ username }}!</h3>
-<h3>Ready to get Hoppin'?!</h3>
-{% if entries %}
+        {% for entry in entries %}
 
-    {% for entry in entries %}
-        <div>
-            <h3>{{ entry['title'] }}</h3>
-            <p>{{ entry['content'] }}</p>
+                <h3>{{ entry['title'] }}</h3>
+                <p>{{ entry['content'] }}</p>
 
-            <a href="/edit/{{ entry['id'] }}">Edit</a>
-            <a href="/delete/{{ entry['id'] }}">Delete</a>
+                <a href="/edit/{{ entry['id'] }}">Edit</a>
+                <a href="/delete/{{ entry['id'] }}">Delete</a>
 
-            <hr>
-        </div>
-    {% endfor %}
+                <hr>
+            </div>
+        {% endfor %}
 
 {% else %}
     <p>No Workouts Yet</p>

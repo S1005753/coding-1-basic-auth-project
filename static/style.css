@@ -37,3 +37,12 @@ button {
 .login-link {
   color: yellow;
 }
+
+.dashboard-page {
+    background: #039617;
+    padding: 50px;
+    border-radius: 120px;
+    box-shadow: 0 0px 10px rgb(0, 0, 0);
+    width: 500px;
+    text-align: center;
+}
