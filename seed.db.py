@@ -26,9 +26,9 @@ def seed_database():
         ("charlie", "MyPassword789#"),
     ]
     sample_entries = [
-        ("Monday workout" , "Did 20 pushups and 30 squats", "alice"),
-        ("Tuesday workout", "Ran 3 miles", "alice"),
-        ("Wednesday workout", "Benched 135 lbs for 5 reps", "alice")
+        ("Monday Workout" , "20 pushups and 30 squats", "alice"),
+        ("Tuesday Workout", "Run 3 miles", "alice"),
+        ("Wednesday Workout", "Bench press 135 lbs for 5 reps", "alice")
     ]
     try:
         for username, password in sample_users:

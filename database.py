@@ -6,7 +6,7 @@ def get_db():
     return conn
 
 def init_db():
-    conn = get_db()
+    conn= get_db()
 
     # USERS TABLE
     conn.execute("""
