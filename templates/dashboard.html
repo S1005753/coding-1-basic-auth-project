@@ -2,62 +2,32 @@
 
 {% extends "base.html" %}
 
+{% block card_class %}dashboard{% endblock %}
 {% block content %}
-<div class = "dashboard-page"></div>
-    <h2>Your Weekly Workouts</h2>
+<div class="dashboard-page">
+    <div class="dashboard-header">
+        <div class="dashboard-greeting">
+            <h1 class="dashboard-welcome">Welcome, {{ username }}!</h1>
+            <h2 class="dashboard-subtitle">Ready to get Hoppin'?!</h2>
+        </div>
+        <a href="/logout" class="logout"><button>Logout</button></a>
+    </div>
 
-    <h3>Welcome, {{ username }}!</h3>
-    <h3>Ready to get Hoppin'?!</h3>
+    <h1 class="dashboard-title">Your Weekly Workouts</h1>
+
     {% if entries %}
-
         {% for entry in entries %}
-
+            <div class="entry-card">
                 <h3>{{ entry['title'] }}</h3>
                 <p>{{ entry['content'] }}</p>
-
-                <a href="/edit/{{ entry['id'] }}">Edit</a>
-                <a href="/delete/{{ entry['id'] }}">Delete</a>
-
-                <hr>
+                <div class="entry-actions">
+                    <a href="/edit/{{ entry['id'] }}">Edit</a>
+                    <a href="/delete/{{ entry['id'] }}">Delete</a>
+                </div>
             </div>
         {% endfor %}
-
-{% else %}
-    <p>No Workouts Yet</p>
-{% endif %}
-
-<!-- TODO: Add a button or link to create a new entry -->
-<!-- Example: <a href="/create">Create New Entry</a> -->
-
-<br><br>
-
-<!-- TODO: Loop through entries passed from Flask -->
-<!-- The variable "entries" will come from your Flask route -->
-<!-- Example structure: -->
-
-<!--
-{% for entry in entries %}
-    <div>
-        <h3>{{ entry['title'] }}</h3>
-        <p>{{ entry['content'] }}</p>
-
-        <!-- TODO: Add Edit link -->
-        <!-- Example: /edit/{{ entry['id'] }} -->
-
-        <!-- TODO: Add Delete link -->
-        <!-- Example: /delete/{{ entry['id'] }} -->
-
-    </div>
-    <hr>
-{% endfor %}
--->
-
-<!-- TODO: If no entries exist, display a message like:
-"No entries yet!" -->
-
-<br>
-
-<!-- TODO: Add a logout button -->
-<a href="/logout"><button>Logout</button></a>
-
+    {% else %}
+        <p>No Workouts Yet</p>
+    {% endif %}
+</div>
 {% endblock %}

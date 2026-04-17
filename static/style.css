@@ -4,15 +4,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 .card {
     background: #039617;
     padding: 50px;
     border-radius: 120px;
     box-shadow: 0 0px 10px rgb(0, 0, 0);
-    width: 350px;
+    width: 100%;
+    max-width: 450px;
     text-align: center;
+}
+.card.dashboard {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    max-width: 560px;
 }
 input {
     width: 100%;
@@ -40,9 +48,64 @@ button {
 
 .dashboard-page {
     background: #039617;
-    padding: 50px;
+    padding: 60px;
     border-radius: 120px;
     box-shadow: 0 0px 10px rgb(0, 0, 0);
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    position: relative;
+    margin-bottom: 40px;
+    min-height: 70px;
+}
+
+.dashboard-greeting {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: calc(100% - 120px);
+}
+
+.dashboard-page .logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.dashboard-page .logout button {
+    font-family: Verdana, sans-serif, serif;
+    width: auto;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    color: #3c2901;
+    cursor: pointer;
+}
+
+.dashboard-page .logout button:hover {
+    background: rgba(255, 255, 0, 0.28);
+}
+
+.entry-card {
+    margin-top: 34px;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+.entry-actions a {
+    margin: 0 10px;
+    color: rgb(7, 227, 243);
+    text-decoration: none;
+}
+
+.entry-actions a:hover {
+    text-decoration: underline;
 }
