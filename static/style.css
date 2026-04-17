@@ -40,10 +40,22 @@ button {
 
 .register-link {
   color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.register-link:hover {
+  color: yellow;
+  text-decoration: underline;
 }
 
 .login-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.login-link:hover {
   color: yellow;
+  text-decoration: underline;
 }
 
 .dashboard-page {
