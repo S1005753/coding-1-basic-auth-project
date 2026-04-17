@@ -31,8 +31,13 @@ button {
     padding: 15px;
     width: 60%;
     background: #07aecc4b;
+    border: 1px solid rgb(0, 0, 0);
+}
+button:hover {
+    background: #00ff04;
     color: rgb(0, 0, 0);
-    border: greenyellow;
+    border: 1px solid rgb(0, 0, 0);
+    cursor:pointer
 }
 .error {
     color: rgb(114, 4, 4);
