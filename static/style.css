@@ -119,10 +119,11 @@ button:hover {
 
 .entry-actions a {
     margin: 0 10px;
-    color: rgb(7, 227, 243);
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
 .entry-actions a:hover {
+    color: rgb(223, 243, 7);
     text-decoration: underline;
 }
