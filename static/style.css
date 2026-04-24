@@ -138,9 +138,28 @@ button:hover {
     background: rgb(4, 255, 0);
 }
 
+.dashboard-page .delete-entries {
+    position: relative;
+    top: 607px;
+}
+
+.dashboard-page .delete-entries button {
+    font-family: Verdana, sans-serif, serif;
+    width: auto;
+    padding: 10px 50px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    color: #000000;
+    cursor: pointer;
+}
+.dashboard-page .delete-entries button:hover {
+    background: rgb(4, 255, 0);
+}
+
 .entry-card {
     margin-top: 34px;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgb(0, 0, 0);
 }
 
 
