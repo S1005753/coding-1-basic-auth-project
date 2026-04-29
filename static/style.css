@@ -118,7 +118,7 @@ button:hover {
 .dashboard-page .create-entry {
     position: absolute;
     top: 180%;
-    left: 0;
+    left: -61%;
     right: 0;
 }
 
@@ -140,7 +140,8 @@ button:hover {
 
 .dashboard-page .delete-entries {
     position: relative;
-    top: 607px;
+    top: 125px;
+    left: 145px;
 }
 
 .dashboard-page .delete-entries button {
@@ -172,4 +173,15 @@ button:hover {
 .entry-actions a:hover {
     color: rgb(223, 243, 7);
     text-decoration: underline;
+}
+
+.create-entry button {
+    font-family: Verdana, sans-serif, serif;
+    width: auto;
+    padding: 10px 50px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    color: #000000;
+    cursor: pointer;
 }
