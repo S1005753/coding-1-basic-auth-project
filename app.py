@@ -109,21 +109,18 @@ def create():
     if request.method == "POST":
         title = request.form["title"].strip()
         content = request.form["content"].strip()
-        user = session["user"]
         conn = get_db()
-    try:
-                
-        conn.execute(
-            "INSERT INTO entries (title, content, user) VALUES (?, ?, ?)",
-            (title, content, session["user"])
-        )
-        conn.commit()
-
-        return redirect(url_for("dashboard"))
-    except:
+        try:
+            conn.execute(
+                "INSERT INTO entries (title, content, user) VALUES (?, ?, ?)",
+                (title, content, session["user"])
+            )
+            conn.commit()
+            return redirect(url_for("dashboard"))
+        except Exception:
             conn.rollback()
             error = "Error occurred while creating entry"
-    finally:
+        finally:
             conn.close()
 
     return render_template("create.html", error=error)
