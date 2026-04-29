@@ -115,7 +115,7 @@ button:hover {
     background: rgb(4, 255, 0);
 }
 
-.dashboard-page .new-entry {
+.dashboard-page .create-entry {
     position: absolute;
     top: 180%;
     left: 0;
@@ -123,7 +123,7 @@ button:hover {
 }
 
 
-.dashboard-page .new-entry button {
+.dashboard-page .create-entry button {
     font-family: Verdana, sans-serif, serif;
     width: auto;
     padding: 10px 50px;
@@ -134,7 +134,7 @@ button:hover {
     cursor: pointer;
 }
 
-.dashboard-page .new-entry button:hover {
+.dashboard-page .create-entry button:hover {
     background: rgb(4, 255, 0);
 }
 

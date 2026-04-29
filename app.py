@@ -99,26 +99,35 @@ def dashboard():
 # - Save data to the database (POST)
 # - Redirect back to dashboard
 # NOTE: Remove the triple """ before and after each route to 'uncomment'
-"""
+
 @app.route("/create", methods=["GET", "POST"])
 def create():
+    error = ""
     if "user" not in session:
         return redirect(url_for("login"))
 
     if request.method == "POST":
-        # TODO: Get form data (title, content)
-
-        # TODO: Connect to database
-
-        # TODO: Insert into entries table
-        # IMPORTANT: include session["user"]
-
-        # TODO: Commit and close
+        title = request.form["title"].strip()
+        content = request.form["content"].strip()
+        user = session["user"]
+        conn = get_db()
+    try:
+                
+        conn.execute(
+            "INSERT INTO entries (title, content, user) VALUES (?, ?, ?)",
+            (title, content, session["user"])
+        )
+        conn.commit()
 
         return redirect(url_for("dashboard"))
+    except:
+            conn.rollback()
+            error = "Error occurred while creating entry"
+    finally:
+            conn.close()
 
-    return render_template("create.html")
-"""
+    return render_template("create.html", error=error)
+
 
 # ---------- UPDATE ----------
 # TODO: Create a route like /edit/<id>

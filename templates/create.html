@@ -4,17 +4,12 @@
 <h2>Create New Entry</h2>
 
 <!-- TODO: Create a form that sends a POST request -->
-
+<h1>Register</h1>
 <form method="POST">
-
-    <!-- TODO: Add input for title -->
-    
-    <!-- TODO: Add input for content -->
-
-    <!-- TODO: Add submit button -->
-
+  <input name="title" placeholder="Title"><br>
+  <input name="content" placeholder="Content"><br>
+  <button type="submit">Create Entry</button>
 </form>
-
-<!-- TODO: Add a link back to dashboard -->
-
+<a href="/" class="dashboard-link">Back to Dashboard</a>
+<p class="error">{{ error }}</p>
 {% endblock %}
