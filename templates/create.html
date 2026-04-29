@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="create-entry-page">
 <h1>Create New Entry</h1>
 
 <!-- TODO: Create a form that sends a POST request -->
 <form method="POST">
   <input name="title" placeholder="Title"><br>
   <input name="content" placeholder="Content"><br>
-  <button type="submit">Create Entry</button>
+  <button type="submit" class="create-btn">Create Entry</button>
 </form>
 <a href="/dashboard" class="dashboard-link">Back to Dashboard</a>
 <p class="error">{{ error }}</p>
