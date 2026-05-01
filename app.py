@@ -133,7 +133,7 @@ def create():
 # - Show it in a form
 # - Update the database on submit
 
-"""
+""""
 @app.route("/edit/<int:id>", methods=["GET", "POST"])
 def edit(id):
     if "user" not in session:
@@ -166,20 +166,37 @@ def edit(id):
 # - Delete an entry from the database
 # - Redirect back to dashboard
 
-"""
+
 @app.route("/delete/<int:id>")
 def delete(id):
     if "user" not in session:
         return redirect(url_for("login"))
+    conn = get_db()
+    entry = conn.execute(
+        "SELECT * FROM entries WHERE id=?",
+        (id,)
+    ).fetchone()
 
-    # TODO: Connect to database
+    if not entry:
+        conn.close()
+        return "Workout Not Found"
+    
+    if request.method == "POST":
+        try:
+            conn.execute(
+                "DELETE FROM entries WHERE id=?",
+                (id,)
+            )
+            conn.commit()
+        except Exception:
+            conn.rollback()
+            return "Error occurred while deleting entry"
+        finally:
+            conn.close()
 
-    # TODO: Delete entry WHERE id AND user
-
-    # TODO: Commit and close
-
-    return redirect(url_for("dashboard"))
-"""
+        return redirect(url_for("dashboard"))
+    conn.close()
+    return render_template("delete.html", entry=entry)
 
 
 @app.route("/logout")
