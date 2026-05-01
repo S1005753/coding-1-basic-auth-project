@@ -161,10 +161,33 @@ def edit(id):
 """
 
 # ---------- DELETE ----------
-# TODO: Create a route like /delete/<id>
-# This should:
-# - Delete an entry from the database
-# - Redirect back to dashboard
+# Delete all workouts for the current user
+@app.route("/delete", methods=["GET", "POST"])
+def delete_all():
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    conn = get_db()
+    if request.method == "POST":
+        try:
+            conn.execute(
+                "DELETE FROM entries WHERE user=?",
+                (session["user"],)
+            )
+            conn.commit()
+        except Exception:
+            conn.rollback()
+            conn.close()
+            return "Error occurred while deleting workouts"
+        conn.close()
+        return redirect(url_for("dashboard"))
+
+    entries = conn.execute(
+        "SELECT * FROM entries WHERE user=?",
+        (session["user"],)
+    ).fetchall()
+    conn.close()
+    return render_template("delete_all.html", entries=entries)
 
 
 @app.route("/delete/<int:id>", methods=["GET", "POST"])

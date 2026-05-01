@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Delete All Workouts</h1>
+
+{% if entries %}
+    <h3>Are you sure you want to delete every workout in your plan?</h3>
+    <div class="delete-list">
+        <p>
+            {% for entry in entries %}
+                <p>{{ entry['title'] }}</p>
+            {% endfor %}
+        </p>
+    </div>
+    <form method="POST">
+        <button type="submit" class="Submit-btn">Confirm Delete All</button>
+    </form>
+    <a href="{{ url_for('dashboard') }}" class="cancel-link">Cancel</a>
+{% else %}
+    <h3>You don't have any workouts to delete.</h3>
+    <a href="{{ url_for('dashboard') }}" class="cancel-link">Back to Dashboard</a>
+{% endif %}
+
+{% endblock %}
