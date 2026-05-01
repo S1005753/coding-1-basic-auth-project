@@ -198,3 +198,25 @@ button:hover {
     color: rgb(223, 243, 7);
     text-decoration: underline;
 }
+
+.Submit-btn {
+    font-family: Verdana, sans-serif, serif;
+    width: auto;
+    padding: 10px 50px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    color: #000000;
+    cursor: pointer;
+}
+.cancel-link{
+    position: relative;
+    top: 10px;
+    margin: 0 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.cancel-link:hover {
+    color: rgb(223, 243, 7);
+    text-decoration: underline;
+}
