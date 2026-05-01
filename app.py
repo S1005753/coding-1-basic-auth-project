@@ -104,7 +104,7 @@ def dashboard():
 def create():
     error = ""
     if "user" not in session:
-        return redirect(url_for("dashboard.html"))
+        return redirect(url_for("dashboard"))
 
     if request.method == "POST":
         title = request.form["title"].strip()
@@ -116,7 +116,7 @@ def create():
                 (title, content, session["user"])
             )
             conn.commit()
-            return redirect(url_for("dashboard.html"))
+            return redirect(url_for("dashboard"))
         except Exception:
             conn.rollback()
             error = "Error occurred while creating entry"
@@ -167,7 +167,7 @@ def edit(id):
 # - Redirect back to dashboard
 
 
-@app.route("/delete/<int:id>")
+@app.route("/delete/<int:id>", methods=["GET", "POST"])
 def delete(id):
     if "user" not in session:
         return redirect(url_for("login"))
