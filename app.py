@@ -133,32 +133,51 @@ def create():
 # - Show it in a form
 # - Update the database on submit
 
-""""
+
 @app.route("/edit/<int:id>", methods=["GET", "POST"])
 def edit(id):
     if "user" not in session:
         return redirect(url_for("login"))
 
+    conn = get_db()
+    entry = conn.execute(
+        "SELECT * FROM entries WHERE id=? AND user=?",
+        (id, session["user"])
+    ).fetchone()
     # TODO: Connect to database
 
     # TODO: Get entry WHERE id AND user
     # This prevents editing other users' data
 
-    # if not entry:
-    #     return "Not allowed"
+    if not entry:
+        conn.close()
+        return "Not allowed"
 
     if request.method == "POST":
-        # TODO: Get updated form data
+        title = request.form["title"].strip()
+        content = request.form["content"].strip()
 
-        # TODO: Update database
-        # IMPORTANT: include id AND session["user"]
-
-        # TODO: Commit and close
-
-        return redirect(url_for("dashboard"))
-
+        if not title or not content:
+            return "Fields cannot be empty"
+        
+        else:
+            try:
+                conn.execute(
+                    "UPDATE entries SET title=?, content=? WHERE id=? AND user=?",
+                    (title, content, id, session["user"])
+                )
+                conn.commit()
+                conn.close()
+                return redirect(url_for("dashboard"))
+            except:
+                conn.rollback()
+                conn.close()
+                return "Error occurred while updating entry"
+    conn.close()
     return render_template("edit.html", entry=entry)
-"""
+        
+
+
 
 # ---------- DELETE ----------
 # Delete all workouts for the current user
