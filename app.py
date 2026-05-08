@@ -151,7 +151,7 @@ def edit(id):
 
     if not entry:
         conn.close()
-        return "Not allowed"
+        return redirect(url_for("dashboard"))
 
     if request.method == "POST":
         title = request.form["title"].strip()
@@ -179,7 +179,7 @@ def edit(id):
 
 
 
-# ---------- DELETE ----------
+
 # Delete all workouts for the current user
 @app.route("/delete", methods=["GET", "POST"])
 def delete_all():
@@ -214,20 +214,21 @@ def delete(id):
     if "user" not in session:
         return redirect(url_for("login"))
     conn = get_db()
+
     entry = conn.execute(
-        "SELECT * FROM entries WHERE id=?",
-        (id,)
+        "SELECT * FROM entries WHERE id=? AND user=?",
+        (id, session["user"])
     ).fetchone()
 
     if not entry:
         conn.close()
-        return "Workout Not Found"
+        return redirect(url_for("dashboard"))
     
     if request.method == "POST":
         try:
             conn.execute(
-                "DELETE FROM entries WHERE id=?",
-                (id,)
+                "DELETE FROM entries WHERE id=? AND user=?",
+                (id, session["user"])
             )
             conn.commit()
         except Exception:
