@@ -20,11 +20,11 @@
     {% if entries %}
         {% for entry in entries %}
             <div class="entry-card">
-                <h3>{{ entry['title'] }}</h3>
+                <h2>{{ entry['title'] }}</h2>
                 <p>{{ entry['content'] }}</p>
                 <div class="entry-actions">
-                    <a href="/edit/{{ entry['id'] }}">Edit</a>
-                    <a href="/delete/{{ entry['id'] }}">Delete</a>
+                    <strong><a href="/edit/{{ entry['id'] }}">Edit</a></strong>
+                    <strong><a href="/delete/{{ entry['id'] }}">Delete</a></strong>
                 </div>
             </div>
         {% endfor %}

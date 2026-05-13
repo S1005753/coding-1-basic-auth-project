@@ -15,10 +15,10 @@
     <form method="POST">
         <button type="submit" class="Submit-btn">Confirm Delete All</button>
     </form>
-    <a href="{{ url_for('dashboard') }}" class="cancel-link">Cancel</a>
+  <strong><a href="{{ url_for('dashboard') }}" class="cancel-link">Cancel</a></strong>
 {% else %}
     <h3>You don't have any workouts to delete.</h3>
-    <a href="{{ url_for('dashboard') }}" class="cancel-link">Back to Dashboard</a>
+ <strong><a href="{{ url_for('dashboard') }}" class="cancel-link">Back to Dashboard</a></strong>
 {% endif %}
 
 {% endblock %}
