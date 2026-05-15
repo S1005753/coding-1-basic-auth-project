@@ -11,14 +11,14 @@ APP PLANNING & DESIGN
 2. DATA MODEL (WHAT ARE YOU STORING?)
 -------------------------
 - What is a single “entry” in your app? The log-in page
-- What fields will each entry have? (title, content, date, etc.) A title saying log in. Spaces to enter information for username and password. And a space to enter the register page
-- How will entries be connected to a user? They can enter information
+- What fields will each entry have? (title, content, date, etc.) A title saying log in. Spaces to enter information for username and password. And a space to enter the register page. The entries themselves will have Title and Content.
+- How will entries be connected to a user? They can enter information that is relevant only to the specific user.
 
 3. CORE FEATURES (CRUD)
 -------------------------
-- What can users CREATE? A username and password. What they did for the day. 
-- What will they see on the main page (READ)? A title. Have you been hoppin' it? A record of their activites for the week.
-- What can users EDIT (UPDATE)? The record. Their account if they wish to (Password or new account)
+- What can users CREATE? A username and password. What they did for the day. Title and Content
+- What will they see on the main page (READ)? A title. Have you been hoppin' it? A record of their activites for the week. A create option, edit option, and delete option.
+- What can users EDIT (UPDATE)? The record. Their account if they wish to (Password or new account). An entry.
 - What can users DELETE? Their account. Delete some past records if they need to.
 
 4. USER FLOW
@@ -29,11 +29,11 @@ APP PLANNING & DESIGN
 
 5. USER EXPERIENCE (UX)
 -------------------------
-- How should your app look and feel? Friendly, froggy, nice and healthy
-- How will users navigate between pages? Buttons, like a log out button, account button.
-- How will entries be displayed (list, cards, etc.)? A mix of list and cards, possibly a chart
+- How should your app look and feel? Friendly, froggy, nice and healthy. Green and blue color scheme for a majority of the app.
+- How will users navigate between pages? Buttons, like a log out button, account button. Edit and delete and create buttons
+- How will entries be displayed (list, cards, etc.)? A mix of list and cards, possibly a chart. Going from top to bottom with a scroll feature.
 
 6. OPTIONAL FEATURES
 -------------------------
-- What extra features might you add? (search, tags, sorting, etc.) To be decided.
+- What extra features might you add? (search, tags, sorting, etc.) A delete all button, maybe some security features.
 
