@@ -5,7 +5,6 @@
 When you finish, add your names and a demo video link here, then submit one link to your project repository.
 
 **Group Members:** Gabriel, Braxton 
-* [Demo Video (1 per group)](http://includeyourlinkhere)
 * https://drive.google.com/file/d/1d81UMw1dZIjVSzLokVhmvt4rEhpGS6JW/view?usp=sharing
 
 
